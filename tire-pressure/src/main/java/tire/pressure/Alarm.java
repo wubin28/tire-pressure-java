@@ -7,11 +7,11 @@ public class Alarm {
     public static final double LowPressureThreshold = 17;
     public static final double HighPressureThreshold = 21;
 
-    private Sensor sensor = new Sensor();
+    private RandomSensor sensor = new RandomSensor();
 
     private boolean alarmOn = false;
 
-    public Alarm(Sensor sensor) {
+    public Alarm(RandomSensor sensor) {
 
     }
 
