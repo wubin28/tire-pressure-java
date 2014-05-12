@@ -16,7 +16,7 @@ public class StubSensor implements Sensor {
 
     @Override
     public double popNextPressurePsiValue() {
-        return this.pressureValue;
+        return this.queue.poll();
     }
 
     public void setPressureValuesToBeChecked(double[] pressureValues) {
