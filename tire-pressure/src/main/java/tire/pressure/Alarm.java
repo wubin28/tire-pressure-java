@@ -11,6 +11,7 @@ public class Alarm {
 
     private boolean alarmOn = false;
 
+    // TODO-sin: Alarm's default constructor
     public Alarm(Sensor sensor) {
 
     }

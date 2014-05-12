@@ -6,6 +6,7 @@ import java.util.Random;
  * Created by benwu on 14-5-12.
  */
 public class RandomSensor {
+    // TODO: implements Sensor
     public static final double OFFSET = 16;
 
     public double popNextPressurePsiValue()
