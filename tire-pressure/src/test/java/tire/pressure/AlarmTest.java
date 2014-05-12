@@ -9,9 +9,9 @@ import static org.junit.Assert.assertTrue;
  * Created by benwu on 14-5-12.
  */
 public class AlarmTest {
-    // TODO-working-on: will the alarm be on if I call the check method
+    // TODO-working-on: the alarm will be off if the pressure value is normal
     @Test
-    public void will_the_alarm_be_on_if_I_call_the_check_method() {
+    public void the_alarm_will_be_off_if_the_pressure_value_is_normal() {
         // Arrange
         Alarm alarm = new Alarm();
 
@@ -21,4 +21,7 @@ public class AlarmTest {
         // Assert
         assertFalse(alarm.isAlarmOn());
     }
+
+    // TODO: the alarm will be on if the pressure value is out of range
+    // TODO: the alarm will still be on if a normal pressure value comes after an out of range one
 }
