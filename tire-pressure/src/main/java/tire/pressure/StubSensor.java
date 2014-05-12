@@ -10,6 +10,6 @@ public class StubSensor implements Sensor {
 
     @Override
     public double popNextPressurePsiValue() {
-        return 0;
+        return this.pressureValue;
     }
 }
