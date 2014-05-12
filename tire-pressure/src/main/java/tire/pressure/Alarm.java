@@ -11,7 +11,7 @@ public class Alarm {
 
     private boolean alarmOn = false;
 
-    public Alarm(RandomSensor sensor) {
+    public Alarm(Sensor sensor) {
 
     }
 
