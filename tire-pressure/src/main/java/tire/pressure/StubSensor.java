@@ -14,4 +14,10 @@ public class StubSensor implements Sensor {
     public double popNextPressurePsiValue() {
         return this.pressureValue;
     }
+
+    public void setPressureValuesToBeChecked(double[] pressureValues) {
+        for(double pressure : pressureValues) {
+            this.queue.offer(pressure);
+        }
+    }
 }
