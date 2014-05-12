@@ -7,4 +7,9 @@ public class StubSensor implements Sensor {
     public void setPressureValueToBeChecked(double pressureValue) {
 
     }
+
+    @Override
+    public double popNextPressurePsiValue() {
+        return 0;
+    }
 }
