@@ -12,7 +12,7 @@ public class Alarm {
     private boolean alarmOn = false;
 
     public Alarm() {
-
+        this(new RandomSensor());
     }
 
     public Alarm(Sensor sensor) {
