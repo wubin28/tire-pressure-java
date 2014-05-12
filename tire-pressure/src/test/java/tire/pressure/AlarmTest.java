@@ -13,7 +13,9 @@ public class AlarmTest {
     @Test
     public void the_alarm_will_be_off_if_the_pressure_value_is_normal() {
         // Arrange
-        Alarm alarm = new Alarm();
+        StubSensor stubSensor = new StubSensor();
+        stubSensor.setPressureValueToBeChecked(Alarm.LowPressureThreshold);
+        Alarm alarm = new Alarm(stubSensor);
 
         // Act
         alarm.check();
