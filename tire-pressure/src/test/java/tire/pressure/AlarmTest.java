@@ -23,7 +23,6 @@ public class AlarmTest {
         assertFalse(alarm.isAlarmOn());
     }
 
-    // TODO: the alarm will be on if the pressure value is out of range
     @Test
     public void the_alarm_will_be_on_if_the_pressure_value_is_out_of_range() {
         // Arrange
@@ -39,4 +38,23 @@ public class AlarmTest {
     }
 
     // TODO: the alarm will still be on if a normal pressure value comes after an out of range one
+    @Test
+    public void the_alarm_will_still_be_on_if_a_normal_pressure_value_comes_after_an_out_of_range_one() {
+        // Arrange
+        StubSensor stubSensor = new StubSensor();
+        stubSensor.setPressureValuesToBeChecked(
+                new double[]{Alarm.LowPressureThreshold
+                        , Alarm.LowPressureThreshold - 1
+                        , Alarm.LowPressureThreshold});
+        Alarm alarm = new Alarm(stubSensor);
+
+        // Act
+        alarm.check();
+        alarm.check();
+        alarm.check();
+
+        // Assert
+        assertTrue(alarm.isAlarmOn());
+    }
+
 }
