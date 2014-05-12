@@ -15,6 +15,7 @@ public class AlarmTest {
         // Arrange
         StubSensor stubSensor = new StubSensor();
         stubSensor.setPressureValueToBeChecked(Alarm.LowPressureThreshold);
+        // TODO-working-on: Substitute the RandomSensor with StubSensor
         Alarm alarm = new Alarm(stubSensor);
 
         // Act
